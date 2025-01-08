@@ -1,1 +1,1 @@
-GRUPO 6 
+GRUPO 6
