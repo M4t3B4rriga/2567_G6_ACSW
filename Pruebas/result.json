@@ -1,0 +1,212 @@
+[
+  {
+    "description": "",
+    "elements": [
+      {
+        "description": "",
+        "id": "gestión-de-pedidos-en-el-restaurante-parriladas-kandela;asignacion-de-mesa-al-cliente",
+        "keyword": "Scenario",
+        "line": 3,
+        "name": "Asignacion de mesa al cliente",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 4,
+            "name": "el mesero le asigan una mesa al cliente",
+            "match": {
+              "location": "features\\step_definitions\\orderSteps.js:12"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 630899
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "gestión-de-pedidos-en-el-restaurante-parriladas-kandela;cliente-realiza-el-pedido",
+        "keyword": "Scenario",
+        "line": 6,
+        "name": "Cliente Realiza el pedido",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 7,
+            "name": "un cliente revisa el menú",
+            "match": {
+              "location": "features\\step_definitions\\orderSteps.js:18"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 67700
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 8,
+            "name": "selecciona \"parrillada mmixta\" y \"Bebida gaseosa\"",
+            "match": {
+              "location": "features\\step_definitions\\orderSteps.js:23"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 173499
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 9,
+            "name": "realiza registro de sus datos para el pedido",
+            "match": {
+              "location": "features\\step_definitions\\orderSteps.js:28"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 50800
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 10,
+            "name": "Envia el pedido al cocinero",
+            "match": {
+              "location": "features\\step_definitions\\orderSteps.js:32"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 108200
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 11,
+            "name": "el estado del pedido de ser \"Por hacer\"",
+            "result": {
+              "status": "undefined",
+              "duration": 0
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "gestión-de-pedidos-en-el-restaurante-parriladas-kandela;cocina-completa-un-pedido",
+        "keyword": "Scenario",
+        "line": 13,
+        "name": "Cocina completa un pedido",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 14,
+            "name": "un pedido esta \"Por hacer\"",
+            "result": {
+              "status": "undefined",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 15,
+            "name": "para a realizarse \"En proceso\"",
+            "result": {
+              "status": "undefined",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 16,
+            "name": "la cocina marca el pedido como \"Listo\"",
+            "result": {
+              "status": "undefined",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 17,
+            "name": "el estado del pedido debe cambiar \"Listo para servir\"",
+            "result": {
+              "status": "undefined",
+              "duration": 0
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "gestión-de-pedidos-en-el-restaurante-parriladas-kandela;entrega-del-pedido",
+        "keyword": "Scenario",
+        "line": 19,
+        "name": "Entrega del pedido",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 20,
+            "name": "un pedido esta en \"Listo para servir\"",
+            "result": {
+              "status": "undefined",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 21,
+            "name": "la mesera debe verificar que todo el pedido este completo",
+            "result": {
+              "status": "undefined",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 22,
+            "name": "la mesera debe pasar el pedido al cliente",
+            "result": {
+              "status": "undefined",
+              "duration": 0
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "gestión-de-pedidos-en-el-restaurante-parriladas-kandela;pago-de-cuenta",
+        "keyword": "Scenario",
+        "line": 23,
+        "name": "Pago de cuenta",
+        "steps": [],
+        "tags": [],
+        "type": "scenario"
+      }
+    ],
+    "id": "gestión-de-pedidos-en-el-restaurante-parriladas-kandela",
+    "line": 1,
+    "keyword": "Feature",
+    "name": "Gestión de pedidos en el restaurante parriladas Kandela",
+    "tags": [],
+    "uri": "features\\order.feature"
+  }
+]
