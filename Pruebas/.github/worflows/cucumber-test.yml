@@ -1,0 +1,35 @@
+name: Run Cucumber Tests and Upload Results to Jira
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  test-and-upload:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout Repository
+      uses: actions/checkout@v3
+
+    - name: Set up Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: 18
+
+    - name: Install Dependencies
+      run: npm install
+
+    - name: Run Cucumber Tests
+      run: npx cucumber-js --format json:results.json
+
+    - name: Upload Results to Cucumber for Jira
+      env:
+        C4J_TOKEN: ${{ secrets.C4J_TOKEN }}
+      run: |
+        curl -X POST https://c4j.bdd.smartbear.com/ci/rest/api/results \
+        -H "authorization: Bearer $C4J_TOKEN" \
+        -H "content-type: multipart/form-data" \
+        -F 'results_files[]=@results.json' \
+        -F language=js
