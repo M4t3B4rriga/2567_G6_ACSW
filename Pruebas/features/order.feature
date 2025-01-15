@@ -1,24 +1,18 @@
 Feature: Gestión de pedidos en el restaurante parriladas Kandela
 
-Scenario: Asignacion de mesa al cliente
-    Given el mesero le asigan una mesa al cliente
+  Como mesero
+  Quiero crear y gestionar pedidos seleccionando platos y bebidas del menú digital
+  Para reducir errores y enviar las órdenes a la cocina en tiempo real
 
-Scenario: Cliente Realiza el pedido 
-    Given un cliente revisa el menú
-    When selecciona "parrillada mmixta" y "Bebida gaseosa"
-    Then realiza registro de sus datos para el pedido
-    And Envia el pedido al cocinero
-    And el estado del pedido de ser "Por hacer"
+  Scenario: Crear un pedido exitosamente
+    Given el mesero está en la pantalla del menú digital
+    When selecciona "Plato A" y "Bebida B"
+    And confirma el pedido
+    Then el sistema debe mostrar el pedido con "Plato A" y "Bebida B" en la lista de pedidos activos
+    And enviar el pedido a la pantalla de la cocina
 
-Scenario: Cocina completa un pedido
-    Given un pedido esta "Por hacer"
-    When para a realizarse "En proceso"
-    When la cocina marca el pedido como "Listo"
-    Then el estado del pedido debe cambiar "Listo para servir"
-    
-Scenario: Entrega del pedido 
-    Given un pedido esta en "Listo para servir"
-    And la mesera debe verificar que todo el pedido este completo
-    Then la mesera debe pasar el pedido al cliente
-Scenario: Pago de cuenta 
+  Scenario: Error al crear un pedido sin seleccionar platos
+    Given el mesero está en la pantalla del menú digital
+    When intenta confirmar el pedido sin seleccionar platos ni bebidas
+    Then el sistema debe mostrar un mensaje de error "Debe seleccionar al menos un plato o bebida"
 

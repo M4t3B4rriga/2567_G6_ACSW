@@ -1,0 +1,133 @@
+[
+  {
+    "description": "  Como mesero\n  Quiero crear y gestionar pedidos seleccionando platos y bebidas del menú digital\n  Para reducir errores y enviar las órdenes a la cocina en tiempo real",
+    "elements": [
+      {
+        "description": "",
+        "id": "gestión-de-pedidos-en-el-restaurante-parriladas-kandela;crear-un-pedido-exitosamente",
+        "keyword": "Scenario",
+        "line": 7,
+        "name": "Crear un pedido exitosamente",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 8,
+            "name": "el mesero está en la pantalla del menú digital",
+            "match": {
+              "location": "features\\step_definitions\\orderSteps.js:10"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1064799
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 9,
+            "name": "selecciona \"Plato A\" y \"Bebida B\"",
+            "match": {
+              "location": "features\\step_definitions\\orderSteps.js:14"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 295299
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 10,
+            "name": "confirma el pedido",
+            "match": {
+              "location": "features\\step_definitions\\orderSteps.js:18"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 113699
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 11,
+            "name": "el sistema debe mostrar el pedido con \"Plato A\" y \"Bebida B\" en la lista de pedidos activos",
+            "match": {
+              "location": "features\\step_definitions\\orderSteps.js:24"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 143100
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 12,
+            "name": "enviar el pedido a la pantalla de la cocina",
+            "match": {
+              "location": "features\\step_definitions\\orderSteps.js:30"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 114499
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "gestión-de-pedidos-en-el-restaurante-parriladas-kandela;error-al-crear-un-pedido-sin-seleccionar-platos",
+        "keyword": "Scenario",
+        "line": 14,
+        "name": "Error al crear un pedido sin seleccionar platos",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 15,
+            "name": "el mesero está en la pantalla del menú digital",
+            "match": {
+              "location": "features\\step_definitions\\orderSteps.js:10"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 71299
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 16,
+            "name": "intenta confirmar el pedido sin seleccionar platos ni bebidas",
+            "result": {
+              "status": "undefined",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 17,
+            "name": "el sistema debe mostrar un mensaje de error \"Debe seleccionar al menos un plato o bebida\"",
+            "result": {
+              "status": "undefined",
+              "duration": 0
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      }
+    ],
+    "id": "gestión-de-pedidos-en-el-restaurante-parriladas-kandela",
+    "line": 1,
+    "keyword": "Feature",
+    "name": "Gestión de pedidos en el restaurante parriladas Kandela",
+    "tags": [],
+    "uri": "features\\order.feature"
+  }
+]

@@ -2,40 +2,47 @@
 const {Given, When, Then}=require('@cucumber/cucumber');
 const assert=require('assert');
 
-// variables para simular la interaccion 
-let mesa={};
-let pedido={};
-let estadoPedido='';
+// Variables para simular la interacción
+let menuSeleccionado = [];
+let pedidoConfirmado = false;
+let notificacion = "";
 
-//ESCENARIO UNO
-//given
-Given('el mesero le asigan una mesa al cliente', function () {
-    mesa={};
+Given('el mesero está en la pantalla del menú digital', function () {
+  menuSeleccionado = [];
 });
 
-//ESCENARIO DOS
-//given
-Given('un cliente revisa el menú', function () {
-    pedido={};
+When('selecciona {string} y {string}', function (plato, bebida) {
+  menuSeleccionado.push(plato, bebida);
 });
 
-// When
-When('selecciona {string} y {string}', function (item1, item2) {
-    pedido.items = [item1, item2];
+When('confirma el pedido', function () {
+  if (menuSeleccionado.length > 0) {
+    pedidoConfirmado = true;
+  }
 });
 
-// Then
-Then('realiza registro de sus datos para el pedido', function () {
-    estadoPedido = "En preparación";
-  });
-
-Then('Envia el pedido al cocinero', function () {
-    estadoPedido = "Por hacer";
+Then('el sistema debe mostrar el pedido con {string} y {string} en la lista de pedidos activos', function (plato, bebida) {
+  if (!menuSeleccionado.includes(plato) || !menuSeleccionado.includes(bebida)) {
+    throw new Error('El pedido no contiene los platos seleccionados');
+  }
 });
 
-Then('el estado del pedido debe ser {string}', function (expectedState) {
-    assert.strictEqual(estadoPedido, expectedState);
+Then('enviar el pedido a la pantalla de la cocina', function () {
+  if (!pedidoConfirmado) {
+    throw new Error('El pedido no fue confirmado');
+  }
 });
 
 
-//ESCENARIO TRES
+
+const reporter = require('cucumber-html-reporter');
+
+const options = {
+    theme: 'bootstrap',
+    jsonFile: 'results.json',
+    output: 'report.html',
+    reportSuiteAsScenarios: true,
+    launchReport: true,
+};
+
+reporter.generate(options);
