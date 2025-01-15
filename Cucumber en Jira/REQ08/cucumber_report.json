@@ -1,0 +1,22 @@
+{
+  "feature": "Cancelación de pedidos",
+  "scenarios": [
+    {
+      "name": "Cancelar un pedido antes de enviarlo",
+      "steps": [
+        "Given el pedido '102' está en estado 'Pendiente'",
+        "When el mesero cancela el pedido",
+        "Then el pedido '102' debe ser eliminado de la lista de pedidos activos"
+      ]
+    },
+    {
+      "name": "Intentar cancelar un pedido ya enviado",
+      "steps": [
+        "Given el pedido '103' está en estado 'En preparación'",
+        "When el mesero intenta cancelar el pedido",
+        "Then el sistema debe mostrar un mensaje 'El pedido no puede ser cancelado porque ya está en preparación'",
+        "And el pedido '103' debe mantenerse en la lista de pedidos activos"
+      ]
+    }
+  ]
+}
