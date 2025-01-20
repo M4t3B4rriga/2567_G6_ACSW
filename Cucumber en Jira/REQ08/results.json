@@ -1,0 +1,110 @@
+[
+  {
+    "description": "  Como mesero\n  Quiero registrar el estado de pago de cada pedido\n  Para mantener un control claro de los pedidos cobrados y pendientes",
+    "elements": [
+      {
+        "description": "",
+        "id": "registro-del-estado-de-pago-de-los-pedidos;registrar-un-pedido-como-pagado-exitosamente",
+        "keyword": "Scenario",
+        "line": 7,
+        "name": "Registrar un pedido como pagado exitosamente",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 8,
+            "name": "el pedido \"Pedido 1\" está en estado \"Pendiente de pago\"",
+            "match": {
+              "location": "features\\step_definitions\\orderSteps.js:7"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2108999
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 9,
+            "name": "el mesero marca el pedido como \"Pagado\"",
+            "match": {
+              "location": "features\\step_definitions\\orderSteps.js:12"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 242300
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 10,
+            "name": "el sistema debe mostrar \"Pedido 1: Pagado\"",
+            "match": {
+              "location": "features\\step_definitions\\orderSteps.js:21"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 255900
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "registro-del-estado-de-pago-de-los-pedidos;error-al-intentar-registrar-un-pedido-como-pagado-que-ya-está-pagado",
+        "keyword": "Scenario",
+        "line": 12,
+        "name": "Error al intentar registrar un pedido como pagado que ya está pagado",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 13,
+            "name": "el pedido \"Pedido 2\" está en estado \"Pagado\"",
+            "match": {
+              "location": "features\\step_definitions\\orderSteps.js:7"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 171799
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 14,
+            "name": "el mesero intenta marcar el pedido como \"Pagado\" nuevamente",
+            "result": {
+              "status": "undefined",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 15,
+            "name": "el sistema debe mostrar un mensaje de error \"El pedido ya está registrado como pagado\"",
+            "match": {
+              "location": "features\\step_definitions\\orderSteps.js:26"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      }
+    ],
+    "id": "registro-del-estado-de-pago-de-los-pedidos",
+    "line": 1,
+    "keyword": "Feature",
+    "name": "Registro del estado de pago de los pedidos",
+    "tags": [],
+    "uri": "features\\order.feature"
+  }
+]

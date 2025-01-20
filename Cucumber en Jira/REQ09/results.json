@@ -1,0 +1,110 @@
+[
+  {
+    "description": "  Como administrador\n  Quiero agregar nuevos platos al menú\n  Para mantener el menú actualizado y variado",
+    "elements": [
+      {
+        "description": "",
+        "id": "agregar-nuevos-platos-al-menú;agregar-un-nuevo-plato-exitosamente",
+        "keyword": "Scenario",
+        "line": 7,
+        "name": "Agregar un nuevo plato exitosamente",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 8,
+            "name": "el menú actual no contiene \"Plato Nuevo\"",
+            "match": {
+              "location": "features\\step_definitions\\orderSteps.js:7"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 4486700
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 9,
+            "name": "el administrador agrega \"Plato Nuevo\" al menú",
+            "match": {
+              "location": "features\\step_definitions\\orderSteps.js:17"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 330199
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 10,
+            "name": "el sistema debe mostrar \"Plato Nuevo añadido al menú\"",
+            "match": {
+              "location": "features\\step_definitions\\orderSteps.js:26"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 417200
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "agregar-nuevos-platos-al-menú;error-al-intentar-agregar-un-plato-ya-existente",
+        "keyword": "Scenario",
+        "line": 12,
+        "name": "Error al intentar agregar un plato ya existente",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 13,
+            "name": "el menú actual contiene \"Plato Existente\"",
+            "match": {
+              "location": "features\\step_definitions\\orderSteps.js:12"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 217800
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 14,
+            "name": "el administrador intenta agregar \"Plato Existente\" al menú",
+            "result": {
+              "status": "undefined",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 15,
+            "name": "el sistema debe mostrar un mensaje de error \"El plato ya existe en el menú\"",
+            "match": {
+              "location": "features\\step_definitions\\orderSteps.js:30"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      }
+    ],
+    "id": "agregar-nuevos-platos-al-menú",
+    "line": 1,
+    "keyword": "Feature",
+    "name": "Agregar nuevos platos al menú",
+    "tags": [],
+    "uri": "features\\order.feature"
+  }
+]

@@ -1,0 +1,113 @@
+[
+  {
+    "description": "  Como mesero\n  Quiero ver el estado de cada plato\n  Para saber cuál está listo y cuál sigue en preparación",
+    "elements": [
+      {
+        "description": "",
+        "id": "mostrar-el-estado-de-los-platos;ver-el-estado-de-los-platos-exitosamente",
+        "keyword": "Scenario",
+        "line": 7,
+        "name": "Ver el estado de los platos exitosamente",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 8,
+            "name": "el plato \"Plato A\" está en estado \"En preparación\"",
+            "match": {
+              "location": "features\\step_definitions\\orderSteps.js:7"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 744500
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 9,
+            "name": "el mesero consulta el estado de \"Plato A\"",
+            "match": {
+              "location": "features\\step_definitions\\orderSteps.js:17"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 106700
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 10,
+            "name": "el sistema debe mostrar \"Plato A: En preparación\"",
+            "match": {
+              "location": "features\\step_definitions\\orderSteps.js:25"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 85100
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "mostrar-el-estado-de-los-platos;error-al-consultar-un-plato-inexistente",
+        "keyword": "Scenario",
+        "line": 12,
+        "name": "Error al consultar un plato inexistente",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 13,
+            "name": "no está registrado el plato \"Plato X\"",
+            "match": {
+              "location": "features\\step_definitions\\orderSteps.js:12"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 59499
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 14,
+            "name": "el mesero consulta el estado de \"Plato X\"",
+            "match": {
+              "location": "features\\step_definitions\\orderSteps.js:17"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 54700
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 15,
+            "name": "el sistema debe mostrar un mensaje de error \"El plato no existe\"",
+            "match": {
+              "location": "features\\step_definitions\\orderSteps.js:29"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 60300
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      }
+    ],
+    "id": "mostrar-el-estado-de-los-platos",
+    "line": 1,
+    "keyword": "Feature",
+    "name": "Mostrar el estado de los platos",
+    "tags": [],
+    "uri": "features\\order.feature"
+  }
+]

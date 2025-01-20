@@ -1,0 +1,107 @@
+[
+  {
+    "description": "  Como mesero\n  Quiero enviar el pedido a la pantalla de la cocina en tiempo real\n  Para que el personal de cocina pueda prepararlo de inmediato",
+    "elements": [
+      {
+        "description": "",
+        "id": "envío-del-pedido-a-la-cocina;enviar-un-pedido-exitosamente",
+        "keyword": "Scenario",
+        "line": 7,
+        "name": "Enviar un pedido exitosamente",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 8,
+            "name": "el mesero confirma el pedido \"Pedido 1\"",
+            "match": {
+              "location": "features\\step_definitions\\orderSteps.js:8"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 747799
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 9,
+            "name": "el pedido es enviado a la cocina",
+            "match": {
+              "location": "features\\step_definitions\\orderSteps.js:18"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 114699
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 10,
+            "name": "el sistema debe mostrar \"Pedido 1 enviado a la cocina\"",
+            "match": {
+              "location": "features\\step_definitions\\orderSteps.js:26"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 106200
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "envío-del-pedido-a-la-cocina;error-al-intentar-enviar-un-pedido-vacío",
+        "keyword": "Scenario",
+        "line": 12,
+        "name": "Error al intentar enviar un pedido vacío",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 13,
+            "name": "el mesero confirma un pedido vacío",
+            "match": {
+              "location": "features\\step_definitions\\orderSteps.js:13"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 51800
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 14,
+            "name": "intenta enviar el pedido a la cocina",
+            "result": {
+              "status": "undefined",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 15,
+            "name": "el sistema debe mostrar un mensaje de error \"El pedido está vacío\"",
+            "result": {
+              "status": "undefined",
+              "duration": 0
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      }
+    ],
+    "id": "envío-del-pedido-a-la-cocina",
+    "line": 1,
+    "keyword": "Feature",
+    "name": "Envío del pedido a la cocina",
+    "tags": [],
+    "uri": "features\\order.feature"
+  }
+]

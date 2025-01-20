@@ -1,0 +1,110 @@
+[
+  {
+    "description": "  Como mesero\n  Quiero recibir notificaciones cuando un pedido esté listo\n  Para poder servirlo a los clientes rápidamente",
+    "elements": [
+      {
+        "description": "",
+        "id": "notificación-de-pedidos-listos;notificar-un-pedido-listo-exitosamente",
+        "keyword": "Scenario",
+        "line": 7,
+        "name": "Notificar un pedido listo exitosamente",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 8,
+            "name": "el pedido \"Pedido 1\" está en estado \"En preparación\"",
+            "match": {
+              "location": "features\\step_definitions\\orderSteps.js:8"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1644199
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 9,
+            "name": "el estado de \"Pedido 1\" cambia a \"Listo\"",
+            "match": {
+              "location": "features\\step_definitions\\orderSteps.js:20"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 269300
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 10,
+            "name": "el sistema debe notificar al mesero con el mensaje \"El pedido Pedido 1 está listo\"",
+            "match": {
+              "location": "features\\step_definitions\\orderSteps.js:31"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 250900
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "notificación-de-pedidos-listos;error-al-intentar-notificar-un-pedido-no-existente",
+        "keyword": "Scenario",
+        "line": 12,
+        "name": "Error al intentar notificar un pedido no existente",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 13,
+            "name": "no existe el pedido \"Pedido 99\"",
+            "match": {
+              "location": "features\\step_definitions\\orderSteps.js:14"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 186400
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 14,
+            "name": "el mesero intenta cambiar el estado de \"Pedido 99\" a \"Listo\"",
+            "result": {
+              "status": "undefined",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 15,
+            "name": "el sistema debe mostrar un mensaje de error \"El pedido no existe\"",
+            "match": {
+              "location": "features\\step_definitions\\orderSteps.js:35"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      }
+    ],
+    "id": "notificación-de-pedidos-listos",
+    "line": 1,
+    "keyword": "Feature",
+    "name": "Notificación de pedidos listos",
+    "tags": [],
+    "uri": "features\\order.feature"
+  }
+]

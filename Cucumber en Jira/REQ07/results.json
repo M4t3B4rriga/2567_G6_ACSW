@@ -1,0 +1,113 @@
+[
+  {
+    "description": "  Como mesero\n  Quiero ver una lista de pedidos por cobrar\n  Para identificar rápidamente los pedidos pendientes de pago",
+    "elements": [
+      {
+        "description": "",
+        "id": "mostrar-pedidos-por-cobrar;ver-pedidos-por-cobrar-exitosamente",
+        "keyword": "Scenario",
+        "line": 7,
+        "name": "Ver pedidos por cobrar exitosamente",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 8,
+            "name": "existen los pedidos \"Pedido 1\" y \"Pedido 2\" con estado \"Por cobrar\"",
+            "match": {
+              "location": "features\\step_definitions\\orderSteps.js:8"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1228999
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 9,
+            "name": "el mesero solicita la lista de pedidos por cobrar",
+            "match": {
+              "location": "features\\step_definitions\\orderSteps.js:23"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 261199
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 10,
+            "name": "el sistema debe mostrar \"Pedido 1, Pedido 2\"",
+            "match": {
+              "location": "features\\step_definitions\\orderSteps.js:30"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 263899
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "mostrar-pedidos-por-cobrar;error-al-solicitar-una-lista-vacía-de-pedidos-por-cobrar",
+        "keyword": "Scenario",
+        "line": 12,
+        "name": "Error al solicitar una lista vacía de pedidos por cobrar",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 13,
+            "name": "no hay pedidos con estado \"Por cobrar\"",
+            "match": {
+              "location": "features\\step_definitions\\orderSteps.js:17"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 190399
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 14,
+            "name": "el mesero solicita la lista de pedidos por cobrar",
+            "match": {
+              "location": "features\\step_definitions\\orderSteps.js:23"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 105999
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 15,
+            "name": "el sistema debe mostrar un mensaje de error \"No hay pedidos por cobrar\"",
+            "match": {
+              "location": "features\\step_definitions\\orderSteps.js:34"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 137300
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      }
+    ],
+    "id": "mostrar-pedidos-por-cobrar",
+    "line": 1,
+    "keyword": "Feature",
+    "name": "Mostrar pedidos por cobrar",
+    "tags": [],
+    "uri": "features\\order.feature"
+  }
+]

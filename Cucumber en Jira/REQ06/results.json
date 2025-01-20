@@ -1,0 +1,110 @@
+[
+  {
+    "description": "  Como mesero\n  Quiero cambiar el estado de los platos individualmente\n  Para reflejar su progreso en la preparación",
+    "elements": [
+      {
+        "description": "",
+        "id": "cambiar-el-estado-de-los-platos;cambiar-el-estado-de-un-plato-exitosamente",
+        "keyword": "Scenario",
+        "line": 7,
+        "name": "Cambiar el estado de un plato exitosamente",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 8,
+            "name": "el plato \"Plato A\" está en estado \"En preparación\"",
+            "match": {
+              "location": "features\\step_definitions\\orderSteps.js:7"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1469500
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 9,
+            "name": "el mesero cambia el estado de \"Plato A\" a \"Listo\"",
+            "match": {
+              "location": "features\\step_definitions\\orderSteps.js:17"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 269700
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 10,
+            "name": "el sistema debe mostrar \"Plato A: Listo\"",
+            "match": {
+              "location": "features\\step_definitions\\orderSteps.js:25"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 235800
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "cambiar-el-estado-de-los-platos;error-al-cambiar-el-estado-de-un-plato-inexistente",
+        "keyword": "Scenario",
+        "line": 12,
+        "name": "Error al cambiar el estado de un plato inexistente",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 13,
+            "name": "el plato \"Plato X\" no está registrado",
+            "match": {
+              "location": "features\\step_definitions\\orderSteps.js:12"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 124199
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 14,
+            "name": "el mesero intenta cambiar el estado de \"Plato X\" a \"Listo\"",
+            "result": {
+              "status": "undefined",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 15,
+            "name": "el sistema debe mostrar un mensaje de error \"El plato no existe\"",
+            "match": {
+              "location": "features\\step_definitions\\orderSteps.js:30"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      }
+    ],
+    "id": "cambiar-el-estado-de-los-platos",
+    "line": 1,
+    "keyword": "Feature",
+    "name": "Cambiar el estado de los platos",
+    "tags": [],
+    "uri": "features\\order.feature"
+  }
+]

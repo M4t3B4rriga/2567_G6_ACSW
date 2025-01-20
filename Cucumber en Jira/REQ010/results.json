@@ -1,0 +1,107 @@
+[
+  {
+    "description": "  Como administrador\n  Quiero desactivar platos existentes\n  Para ocultarlos temporalmente sin eliminarlos del menú",
+    "elements": [
+      {
+        "description": "",
+        "id": "desactivar-platos-del-menú;desactivar-un-plato-exitosamente",
+        "keyword": "Scenario",
+        "line": 7,
+        "name": "Desactivar un plato exitosamente",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 8,
+            "name": "el menú contiene \"Plato A\"",
+            "match": {
+              "location": "features\\step_definitions\\orderSteps.js:7"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1930999
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 9,
+            "name": "el administrador desactiva \"Plato A\"",
+            "match": {
+              "location": "features\\step_definitions\\orderSteps.js:17"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 261099
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 10,
+            "name": "el sistema debe mostrar \"Plato A desactivado\"",
+            "match": {
+              "location": "features\\step_definitions\\orderSteps.js:26"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 191900
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "desactivar-platos-del-menú;error-al-intentar-desactivar-un-plato-ya-desactivado",
+        "keyword": "Scenario",
+        "line": 12,
+        "name": "Error al intentar desactivar un plato ya desactivado",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 13,
+            "name": "el plato \"Plato B\" ya está desactivado",
+            "match": {
+              "location": "features\\step_definitions\\orderSteps.js:12"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 184099
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 14,
+            "name": "el administrador intenta desactivar \"Plato B\" nuevamente",
+            "result": {
+              "status": "undefined",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 15,
+            "name": "el sistema debe mostrar un mensaje de error \"El plato ya está desactivado\"",
+            "result": {
+              "status": "undefined",
+              "duration": 0
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      }
+    ],
+    "id": "desactivar-platos-del-menú",
+    "line": 1,
+    "keyword": "Feature",
+    "name": "Desactivar platos del menú",
+    "tags": [],
+    "uri": "features\\order.feature"
+  }
+]

@@ -1,0 +1,110 @@
+[
+  {
+    "description": "  Como mesero\n  Quiero modificar o cancelar pedidos antes de ser preparados\n  Para corregir errores o cambios solicitados por los clientes",
+    "elements": [
+      {
+        "description": "",
+        "id": "modificar-o-cancelar-pedidos;modificar-un-pedido-exitosamente",
+        "keyword": "Scenario",
+        "line": 7,
+        "name": "Modificar un pedido exitosamente",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 8,
+            "name": "el pedido \"Pedido 1\" está en estado \"Pendiente\"",
+            "match": {
+              "location": "features\\step_definitions\\orderSteps.js:7"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1084500
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 9,
+            "name": "el mesero modifica el pedido añadiendo \"Plato C\"",
+            "match": {
+              "location": "features\\step_definitions\\orderSteps.js:12"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 156999
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 10,
+            "name": "el sistema debe mostrar el pedido actualizado con \"Plato C\"",
+            "match": {
+              "location": "features\\step_definitions\\orderSteps.js:21"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 77800
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "modificar-o-cancelar-pedidos;error-al-intentar-modificar-un-pedido-ya-preparado",
+        "keyword": "Scenario",
+        "line": 12,
+        "name": "Error al intentar modificar un pedido ya preparado",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 13,
+            "name": "el pedido \"Pedido 2\" está en estado \"Listo\"",
+            "match": {
+              "location": "features\\step_definitions\\orderSteps.js:7"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 73600
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 14,
+            "name": "el mesero intenta modificar el pedido añadiendo \"Plato C\"",
+            "result": {
+              "status": "undefined",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 15,
+            "name": "el sistema debe mostrar un mensaje de error \"No se puede modificar un pedido ya preparado\"",
+            "match": {
+              "location": "features\\step_definitions\\orderSteps.js:26"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      }
+    ],
+    "id": "modificar-o-cancelar-pedidos",
+    "line": 1,
+    "keyword": "Feature",
+    "name": "Modificar o cancelar pedidos",
+    "tags": [],
+    "uri": "features\\order.feature"
+  }
+]
