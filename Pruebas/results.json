@@ -1,51 +1,77 @@
 [
   {
-    "description": "  Como administrador\n  Quiero guardar un historial de cambios en el menú\n  Para mantener un registro de todas las modificaciones",
+    "description": "  Como mesero\n  Quiero crear y gestionar pedidos seleccionando platos y bebidas del menú digital\n  Para reducir errores y enviar las órdenes a la cocina en tiempo real",
     "elements": [
       {
         "description": "",
-        "id": "historial-de-cambios-en-el-menú;registrar-un-cambio-en-el-menú-exitosamente",
+        "id": "gestión-de-pedidos-en-el-restaurante-parriladas-kandela;crear-un-pedido-exitosamente",
         "keyword": "Scenario",
         "line": 7,
-        "name": "Registrar un cambio en el menú exitosamente",
+        "name": "Crear un pedido exitosamente",
         "steps": [
           {
             "arguments": [],
             "keyword": "Given ",
             "line": 8,
-            "name": "el historial de cambios está vacío",
+            "name": "el mesero está en la pantalla del menú digital",
             "match": {
-              "location": "features\\step_definitions\\orderSteps.js:7"
+              "location": "features\\step_definitions\\orderSteps.js:9"
             },
             "result": {
               "status": "passed",
-              "duration": 2132100
+              "duration": 682299
             }
           },
           {
             "arguments": [],
             "keyword": "When ",
             "line": 9,
-            "name": "el administrador agrega \"Plato A\" al menú",
+            "name": "selecciona \"Plato A\" y \"Bebida B\"",
             "match": {
-              "location": "features\\step_definitions\\orderSteps.js:12"
+              "location": "features\\step_definitions\\orderSteps.js:13"
             },
             "result": {
               "status": "passed",
-              "duration": 282600
+              "duration": 383600
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 10,
+            "name": "confirma el pedido",
+            "match": {
+              "location": "features\\step_definitions\\orderSteps.js:17"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 67600
             }
           },
           {
             "arguments": [],
             "keyword": "Then ",
-            "line": 10,
-            "name": "el sistema debe registrar \"Plato A añadido al menú\" en el historial",
+            "line": 11,
+            "name": "el sistema debe mostrar el pedido con \"Plato A\" y \"Bebida B\" en la lista de pedidos activos",
             "match": {
-              "location": "features\\step_definitions\\orderSteps.js:22"
+              "location": "features\\step_definitions\\orderSteps.js:23"
             },
             "result": {
               "status": "passed",
-              "duration": 124800
+              "duration": 91599
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 12,
+            "name": "enviar el pedido a la pantalla de la cocina",
+            "match": {
+              "location": "features\\step_definitions\\orderSteps.js:29"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 65699
             }
           }
         ],
@@ -54,48 +80,42 @@
       },
       {
         "description": "",
-        "id": "historial-de-cambios-en-el-menú;error-al-intentar-acceder-al-historial-vacío",
+        "id": "gestión-de-pedidos-en-el-restaurante-parriladas-kandela;error-al-crear-un-pedido-sin-seleccionar-platos",
         "keyword": "Scenario",
-        "line": 12,
-        "name": "Error al intentar acceder al historial vacío",
+        "line": 14,
+        "name": "Error al crear un pedido sin seleccionar platos",
         "steps": [
           {
             "arguments": [],
             "keyword": "Given ",
-            "line": 13,
-            "name": "el historial de cambios está vacío",
+            "line": 15,
+            "name": "el mesero está en la pantalla del menú digital",
             "match": {
-              "location": "features\\step_definitions\\orderSteps.js:7"
+              "location": "features\\step_definitions\\orderSteps.js:9"
             },
             "result": {
               "status": "passed",
-              "duration": 78800
+              "duration": 43399
             }
           },
           {
             "arguments": [],
             "keyword": "When ",
-            "line": 14,
-            "name": "el administrador consulta el historial",
-            "match": {
-              "location": "features\\step_definitions\\orderSteps.js:16"
-            },
+            "line": 16,
+            "name": "intenta confirmar el pedido sin seleccionar platos ni bebidas",
             "result": {
-              "status": "passed",
-              "duration": 125000
+              "status": "undefined",
+              "duration": 0
             }
           },
           {
             "arguments": [],
             "keyword": "Then ",
-            "line": 15,
-            "name": "el sistema debe mostrar \"El historial está vacío\"",
-            "match": {
-              "location": "features\\step_definitions\\orderSteps.js:26"
-            },
+            "line": 17,
+            "name": "el sistema debe mostrar un mensaje de error \"Debe seleccionar al menos un plato o bebida\"",
             "result": {
-              "status": "passed",
-              "duration": 469400
+              "status": "undefined",
+              "duration": 0
             }
           }
         ],
@@ -103,10 +123,10 @@
         "type": "scenario"
       }
     ],
-    "id": "historial-de-cambios-en-el-menú",
+    "id": "gestión-de-pedidos-en-el-restaurante-parriladas-kandela",
     "line": 1,
     "keyword": "Feature",
-    "name": "Historial de cambios en el menú",
+    "name": "Gestión de pedidos en el restaurante parriladas Kandela",
     "tags": [],
     "uri": "features\\order.feature"
   }

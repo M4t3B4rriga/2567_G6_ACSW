@@ -1,15 +1,17 @@
-Feature: Historial de cambios en el menú
+Feature: Gestión de pedidos en el restaurante parriladas Kandela
 
-  Como administrador
-  Quiero guardar un historial de cambios en el menú
-  Para mantener un registro de todas las modificaciones
+  Como mesero
+  Quiero crear y gestionar pedidos seleccionando platos y bebidas del menú digital
+  Para reducir errores y enviar las órdenes a la cocina en tiempo real
 
-  Scenario: Registrar un cambio en el menú exitosamente
-    Given el historial de cambios está vacío
-    When el administrador agrega "Plato A" al menú
-    Then el sistema debe registrar "Plato A añadido al menú" en el historial
+  Scenario: Crear un pedido exitosamente
+    Given el mesero está en la pantalla del menú digital
+    When selecciona "Plato A" y "Bebida B"
+    And confirma el pedido
+    Then el sistema debe mostrar el pedido con "Plato A" y "Bebida B" en la lista de pedidos activos
+    And enviar el pedido a la pantalla de la cocina
 
-  Scenario: Error al intentar acceder al historial vacío
-    Given el historial de cambios está vacío
-    When el administrador consulta el historial
-    Then el sistema debe mostrar "El historial está vacío"
+  Scenario: Error al crear un pedido sin seleccionar platos
+    Given el mesero está en la pantalla del menú digital
+    When intenta confirmar el pedido sin seleccionar platos ni bebidas
+    Then el sistema debe mostrar un mensaje de error "Debe seleccionar al menos un plato o bebida"

@@ -1,34 +1,36 @@
-const { Given, When, Then } = require('@cucumber/cucumber');
-const assert = require('assert');
+const {Given, When, Then}=require('@cucumber/cucumber');
+const assert=require('assert');
 
-let historial;
-let mensajeHistorial;
+// Variables para simular la interacción
+let menuSeleccionado = [];
+let pedidoConfirmado = false;
+let notificacion = "";
 
-Given('el historial de cambios está vacío', function () {
-  historial = [];
-  mensajeHistorial = null;
+Given('el mesero está en la pantalla del menú digital', function () {
+  menuSeleccionado = [];
 });
 
-When('el administrador agrega {string} al menú', function (cambio) {
-  historial.push(`${cambio} añadido al menú`);
+When('selecciona {string} y {string}', function (plato, bebida) {
+  menuSeleccionado.push(plato, bebida);
 });
 
-When('el administrador consulta el historial', function () {
-  if (historial.length === 0) {
-    mensajeHistorial = "El historial está vacío";
+When('confirma el pedido', function () {
+  if (menuSeleccionado.length > 0) {
+    pedidoConfirmado = true;
   }
 });
 
-Then('el sistema debe registrar {string} en el historial', function (cambioEsperado) {
-  assert.ok(historial.includes(cambioEsperado));
+Then('el sistema debe mostrar el pedido con {string} y {string} en la lista de pedidos activos', function (plato, bebida) {
+  if (!menuSeleccionado.includes(plato) || !menuSeleccionado.includes(bebida)) {
+    throw new Error('El pedido no contiene los platos seleccionados');
+  }
 });
 
-Then('el sistema debe mostrar {string}', function (mensajeEsperado) {
-  assert.strictEqual(mensajeHistorial, mensajeEsperado);
+Then('enviar el pedido a la pantalla de la cocina', function () {
+  if (!pedidoConfirmado) {
+    throw new Error('El pedido no fue confirmado');
+  }
 });
-
-
-
 
 
 
