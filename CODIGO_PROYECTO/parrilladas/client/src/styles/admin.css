@@ -1,0 +1,31 @@
+.navAdmin{
+    margin: 10px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 25%);
+    background-color: rgb(56, 54, 50);
+    border-radius: 8px 8px 8px 8px;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.185);
+}
+
+.navAdmin button{
+    font-family: 'Glacial Indifference';
+    color: white;
+    border: none;
+    border-right:1px solid rgba(43, 43, 43, 0.747);
+    border-left:1px solid rgba(39, 39, 39, 0.664);
+    border-bottom: 10px solid gray;
+    cursor: pointer;
+    background: none;
+    padding: 15px 20px;
+    font-size: 18px;
+}
+
+.navAdmin button:hover{
+    background: linear-gradient(180deg, rgba(105, 105, 105, 0.664), rgba(39, 39, 39, 0.664));
+    border-radius: 8px 8px 0 0;
+}
+
+.navAdmin .Activo{
+    background: linear-gradient(180deg, rgba(85, 85, 85, 0.664), rgba(39, 39, 39, 0.664));
+    border-radius: 8px 8px 0 0;
+}

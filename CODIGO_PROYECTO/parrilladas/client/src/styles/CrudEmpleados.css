@@ -1,0 +1,62 @@
+.CrudEmpleados{
+    margin-bottom: 20px;
+}
+
+.CadaEmpleado{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 20%);
+}
+
+.Tarjeta-empleado{
+    background-color: white;
+    box-shadow: 0 0 1px black;
+    border-radius: 5px;
+    margin: 5px;
+    margin-left: 20px;
+    padding: 0 10px;
+}
+
+.CargoSection h2{
+    padding-left: 20px;
+}
+
+.nuevoEmpleado{
+    padding-left: 20px;
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+.nuevoEmpleado input{
+    padding: 10px;
+    font-size: 15px;
+    padding-left: 20px;
+    display: grid;
+    width: 60%;
+    grid-template-columns: 50% 50%;
+}
+
+.ModalEmpleados h1{
+    padding-left: 20px;
+    margin-bottom: 0;
+    padding-bottom:15px;
+    border-bottom: 1px solid black;
+}
+
+.botonCrud{
+    padding: 10px 0px;
+    margin: 40px 100px;
+    border: none;
+    border-radius: 8px;
+    background-color: #eab740;
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: clamp(0.3em, 0.9vw, 1.2em);
+    font-family: "Roboto Slab", Helvetica, Arial, sans-serif;
+    transform: translate(80px,20px);
+}
+
+.Configuraciones {
+    padding-top: 20px;
+    padding-left: 20px;
+}

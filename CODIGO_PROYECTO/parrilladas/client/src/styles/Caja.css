@@ -1,0 +1,138 @@
+.ContainerCaja {
+  /* Estilos para el contenedor principal */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 20px;
+}
+  
+.OrdenCaja {
+  /* Estilos para cada orden en el contenedor */
+  background-color: #f0f0f0;
+  border-radius: 8px;
+  padding: 20px;
+  margin: 10px;
+  width: 300px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+  
+  .MesaOrden {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  /* Agrega aquí estilos adicionales para otros elementos en las órdenes si es necesario */
+  
+  .botonFactura{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: end;
+    left: 0;
+  }
+
+  .button-fac {
+
+    padding: 8px 16px;
+    background-color: #ec8a3a;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    height: 30px;
+    width: 100%;
+  }
+  
+  .OrdenInfo h2{
+    text-align: center;
+    border-bottom: 1px solid rgba(134, 134, 134, 0.441);
+    margin: auto;
+    padding: 10px 0;
+  }
+
+  .button-fac:hover {
+    background-color: #3cb300;
+  }
+
+  @media (max-width: 768px) {
+    .OrdenCaja {
+      width: 100%; 
+      margin: 10px 0; 
+    }
+  
+    .OrdenInfo h2 {
+      text-align: center; /* Centra el título en pantallas pequeñas */
+    }
+  
+    .botonFactura {
+      align-items: center; /* Centra los botones verticalmente en pantallas pequeñas */
+      flex-direction: column; /* Cambia la dirección de los botones a columna en pantallas pequeñas */
+    }
+  
+    .button-fac {
+      margin-top: 10px; /* Espaciado entre los botones en pantallas pequeñas */
+      width: 100%; /* Ajusta el ancho de los botones para ocupar todo el espacio disponible */
+    }
+  }
+  
+  /* Media query para pantallas muy pequeñas */
+  @media (max-width: 480px) {
+    .OrdenCaja {
+      padding: 10px; /* Reduce el padding en pantallas muy pequeñas */
+    }
+  }
+
+  .historial-container {
+    margin-top: 20px;
+    margin-left: 200px;
+    margin-bottom: 30px;
+
+  }
+  
+  .historial-heading {
+    font-size: 20px;
+    margin-bottom: 10px;
+
+  }
+  
+  .historial-table {
+    width: 80%;
+    border-collapse: collapse;
+    background-color: #f2f2f2;
+    padding: 8px;
+    border: 1px solid #ccc;
+  }
+  
+  .table-header {
+    background-color: #d3cfcd;
+    padding: 8px;
+    border: 1px solid #ccc;
+    text-align: left;
+    font-weight: bold;
+  }
+  
+  .table-row {
+    border: 1px solid #ccc;
+  }
+  
+  .table-row td {
+    padding: 8px;
+    border: 1px solid #ccc;
+  }
+
+  .filtro-container{
+    display: flex;
+    height: 30px;
+    margin: 10px 0;
+    align-items: center;
+  }
+
+  .filtro-container p{
+    padding: 0 10px;
+  }
+
+  .filtro-container button{
+    margin-left: 10px;
+  }

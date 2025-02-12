@@ -1,0 +1,132 @@
+.ContainerCocina {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Usar fr en lugar de porcentajes para mejor manejo */
+    gap: 10px; /* Agregar espacio entre las columnas */
+    margin: 0 10px;
+    margin-bottom: 15px;
+  }
+  
+  .OrdenCocina {
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(255, 255, 255);
+    margin: 5px 5px;
+    padding: 5px 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.164);
+  }
+  
+  .PlatoOrden {
+    display: flex;
+    align-items: center; /* Centrar contenido verticalmente */
+    border-bottom: 1px solid rgba(128, 128, 128, 0.336);
+    justify-content: space-around;
+  }
+  
+  .PlatoOrden .nombrePlato,
+  .PlatoOrden .cantidadPlato, 
+  .precioPlato, .domicilio{
+    flex: 1; /* Distribuir espacio en partes iguales */
+  }
+  
+  .ContainerCocina .botonPlato{
+    display: flex;
+    margin-top: auto;
+    justify-content: space-between;
+  }
+
+  .ContainerCocina .DescripcionPlato{
+    border: 1px dashed red;
+    background-color: rgb(248, 247, 213);
+    padding: 10px 5px;
+  }
+
+  .ContainerCocina .MesaOrden{
+    font-weight: bold;
+    font-size: 25px;
+    text-align: center;
+    border-bottom: 1px solid black;
+    margin: 5px 0;
+    padding-bottom: 5px;
+  }
+
+  .ContainerCocina .CancelarOrden{
+    margin-left: auto;
+    margin-right: 10px;
+  }
+
+  .botonPlato button{
+    height: 30px;
+    align-self: center;
+  }
+
+  .botonPlato .EstadoOrden{
+    margin: 15px auto;
+    font-size: 25px;
+    font-weight: bold;
+  }
+
+  .PlatoActivo{
+    width: 20px;
+    height: 20px;
+    border-radius: 100%;
+    margin-right: 5px;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.4);
+  }
+
+  .PlatoTerminado{
+    background-color: rgb(86, 198, 82);
+    width: 35px;
+    height: 15px;
+    border-radius: 50%;
+    flex: 1;
+  }
+
+  .cantidadPlato, .domicilio, .precioPlato{
+    text-align: center;
+  }
+
+.platosRealizados{
+  margin-right: 45px;
+}
+
+  .Secciones{
+    display: flex;
+    justify-content: space-between;
+  }
+
+  /* Estilos generales */
+/* ... Tus estilos existentes ... */
+
+/* Media query para pantallas pequeñas */
+@media (max-width: 768px) {
+  .ContainerCocina {
+    grid-template-columns: repeat(1, 1fr); /* Cambiar a una sola columna */
+  }
+
+  .OrdenCocina {
+    margin: 10px; /* Aumentar el margen para separar las órdenes */
+  }
+
+  .botonPlato {
+    flex-direction: column; /* Cambiar la dirección del flexbox */
+    align-items: center; /* Centrar contenido horizontalmente */
+  }
+
+  .botonPlato button {
+    margin: 5px 0; /* Espaciado entre los botones */
+  }
+
+  .DescripcionPlato {
+    padding: 10px; /* Aumentar el padding para mayor espacio */
+  }
+
+  .MesaOrden {
+    font-size: 20px; /* Reducir el tamaño del texto */
+    padding-bottom: 3px; /* Reducir el espaciado inferior */
+  }
+
+  .EstadoOrden {
+    font-size: 20px; /* Reducir el tamaño del texto */
+    margin: 10px auto; /* Alinear el texto al centro */
+  }
+}

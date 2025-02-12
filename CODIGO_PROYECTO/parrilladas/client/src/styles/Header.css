@@ -1,0 +1,188 @@
+.Header {
+    background: url("../images/Logo.png") top -7px left 20px / 370px no-repeat,
+      url("../images/HeaderBackground.jpg") center / 1800px no-repeat;
+    width: 100%;
+    padding: 15px 0;
+    height: 11rem;
+  }
+  
+  .Menu {
+    background: #262424;
+    width: 100%;
+    height: 4rem;
+    color: rgb(249, 143, 29);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: -1px;
+    z-index: 2;
+  }
+  
+  .Menu .titulo {
+    font-size: 30px;
+    margin-left: 40px;
+  }
+  
+  .login {
+    background: none;
+    border: none;
+    color: rgb(236, 83, 83);
+    display: flex;
+    cursor: pointer;
+    margin-right: 20px; /* Cambiado a margin-right */
+  }
+  
+  .login .texto {
+    margin-right: 10px;
+    font-size: 15px;
+  }
+  
+  .login img {
+    width: 15px;
+    height: auto;
+    transform: scale(1.6);
+  }
+  
+  .RightSection {
+    display: flex;
+    align-items: center;
+    margin-right: 20px; /* Alinear a la derecha */
+  }
+  
+  .Usuario {
+    display: flex;
+    align-items: center;
+    margin-right: 10px; /* Alinear a la derecha */
+  }
+  
+  .Usuario p {
+    font-size: 15px;
+    margin-right: 10px;
+  }
+  
+  .logout {
+    background: none;
+    border: none;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+  }
+  
+  .logout .texto {
+    font-size: 15px;
+  }
+  
+  .Busqueda button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    transform: translate(30px, 2px);
+  }
+  
+  .Busqueda button img {
+    width: 15px;
+    height: auto;
+    filter: brightness(4) opacity(0.7);
+    margin-left: -15px;
+  }
+  
+  .Menu .Buscar {
+    background: none;
+    border: 1.5px solid white;
+    border-radius: 5px;
+    padding: 5px;
+    font-size: 17px;
+    padding-left: 30px;
+    margin-right: 50px;
+    color: rgb(255, 255, 255);
+  }
+  
+  .Menu .Buscar::placeholder {
+    color: white;
+    filter: opacity(0.8);
+  }
+  
+  .Menu .Buscar:focus {
+    outline: none;
+    color: white;
+  }
+  
+  @media (max-width: 768px) {
+    .Header {
+      background: url("../images/Logo.png") center / 200px no-repeat,
+        url("../images/HeaderBackground.jpg") center / 800px no-repeat;
+      height: 8rem;
+    }
+  
+    .Menu {
+      height: auto;
+      flex-direction: column;
+      align-items: center;
+      padding: 10px 0;
+    }
+  
+    .Menu .titulo {
+      margin: 0;
+      margin-bottom: 10px;
+      font-size: 24px;
+      text-align: center;
+    }
+  
+    .login {
+      margin: 10px 0;
+      justify-content: center;
+      align-items: center;
+    }
+  
+    .login .texto {
+      margin: 0;
+      font-size: 14px;
+    }
+  
+    .login img {
+      margin: 0;
+      transform: scale(1.4);
+    }
+  
+    .Usuario {
+      margin: 10px 0;
+      text-align: center;
+    }
+  
+    .Usuario p {
+      font-size: 14px;
+      margin: 0;
+    }
+  
+    .Busqueda {
+      margin: 10px 0;
+      text-align: center;
+    }
+  
+    .Busqueda button {
+      transform: none;
+      margin: 5px;
+    }
+  
+    .Busqueda button img {
+      margin-left: 0;
+    }
+  
+    .Menu .Buscar {
+      margin: 10px 0;
+      width: 90%;
+      padding: 8px;
+      font-size: 14px;
+      text-align: center;
+    }
+  }
+  
+  .login{
+    box-shadow: none;
+    text-decoration: none !important;
+  }
+
+  .login a{
+    text-decoration: none;
+    color: yellowgreen;
+  }
